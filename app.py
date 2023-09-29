@@ -9,6 +9,8 @@ from forms import SignUpForm, LoginForm, CSRFProtection
 from models import db, connect_db, User, Match
 from utils import upload_image, get_zipcodes
 
+from .views.admin import admin
+
 load_dotenv()
 
 CURR_USER_KEY = "curr_user"
