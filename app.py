@@ -9,7 +9,7 @@ from forms import SignUpForm, LoginForm, CSRFProtection
 from models import db, connect_db, User, Match
 from utils import upload_image, get_zipcodes
 
-from .views.admin import admin
+from views.admin import admin
 
 load_dotenv()
 
@@ -24,6 +24,9 @@ app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
 toolbar = DebugToolbarExtension(app)
 
 connect_db(app)
+
+# Registering blueprints
+app.register_blueprint(admin)
 
 
 #############################################################################

@@ -7,5 +7,9 @@ admin = Blueprint('admin', __name__,
 
 @admin.route('/admin')
 def admin_home():
-    return render_template("admin/home.html")
+    return render_template("home.html")
+
+@admin.route('/admin/test')
+def admin_test():
+    return render_template("home.html")
 
