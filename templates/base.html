@@ -24,7 +24,7 @@
             <div class="navbar-header">
               <a href="/" class="navbar-brand">
                 <img src="/static/friender.jpg" alt="logo">
-                <span>Friender</span>
+                <span>Friend-or-Foe</span>
               </a>
             </div>
 
@@ -61,7 +61,7 @@
           </div>
         </nav>
 
-        <div class="container">
+        <div class="bg-area container">
 
           {% for category, message in get_flashed_messages(with_categories=True) %}
             <div class="alert alert-{{ category }}">{{ message }}</div>
